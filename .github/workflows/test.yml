@@ -30,8 +30,8 @@ jobs:
         run: echo Hello, world!
 
       # Runs a set of commands using the runners shell
-      - name: Get NMAP
-        run: sudo apt-get -y nmap
+      - name: Get Testing script
+        run: sudo git clone https://github.com/CISOfy/lynis.git
+        run: cd lynis
+        run: ./lynis audit system -Q
         
-      - name: Check installed or not
-        run: nmap --version
