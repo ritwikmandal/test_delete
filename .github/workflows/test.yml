@@ -31,8 +31,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Get NMAP
-        uses: ryankurte/action-apt@v0.3.0
-        with: nmap
+        run: sudo apt-get -y nmap
         
       - name: Check installed or not
         run: nmap --version
