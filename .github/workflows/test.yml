@@ -32,9 +32,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Get Testing script
         run: sudo git clone https://github.com/CISOfy/lynis.git
-      - name: Changing dir  
-        run: cd lynis
-      - name: Running script   
-        run: ./lynis audit system -Q
+      - name: Running Script
+        run: cd lynis && ./lynis audit system -Q
       - name: Finishing
         run: echo "Done ritman"
