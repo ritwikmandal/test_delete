@@ -12,13 +12,20 @@ on:
 
 
 jobs:
-  automating_Some_Test:
+  automating_checkout:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Get Testing script
-        run: sudo git clone https://github.com/CISOfy/lynis.git
-      - name: Running Script
-        run: cd lynis && ./lynis audit system -Q
-      - name: Finishing
-        run: echo "Done ritman"
+    - uses: actions/checkout@v2
+      name: Check out code
+
+    - uses: mr-smithers-excellent/docker-build-push@v5
+      name: Build & push Docker image
+      with:
+            image: repo/image
+            tags: v1, latest
+            registry: registry-url.io
+            dockerfile: Dockerfile.ci
+            username: ${{ secrets.DOCKER_USERNAME }}
+            password: ${{ secrets.DOCKER_PASSWORD }}  
+  
+
