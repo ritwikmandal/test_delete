@@ -1,3 +1,3 @@
 # test_delete
-For Netskope Git Actions
+For Git Actions
 Trying to trigger runners
