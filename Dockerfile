@@ -4,6 +4,5 @@ FROM ubuntu:18.04
 WORKDIR /app_ritman
 COPY . /app_ritman
 RUN apt-get update 
-#
-CMD ["./lynis.sh", "audit", "system;"]
+# CMD ["./lynis.sh", "audit", "system;"]
 
