@@ -19,7 +19,6 @@ jobs:
     
     - name: Build & push Docker image
       run: |
-        cat dockerfile.ci
-        ls
+        docker build -t ritman_image .
         
         
