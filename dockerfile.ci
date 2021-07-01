@@ -1,0 +1,10 @@
+# The line below states we will base our new image on the Latest Official Ubuntu 
+FROM ubuntu:18.04
+RUN apt-get update 
+
+#
+# Install git
+RUN apt-get install git -y
+
+#
+CMD ["which", "git;"]
