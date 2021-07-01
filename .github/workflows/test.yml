@@ -20,6 +20,7 @@ jobs:
     - name: Build & push Docker image
       run: |
         docker build -t ritman_image .
-        docker run ritman_image:latest 
+        docker run ritman_image:latest ls
+        
         
         
