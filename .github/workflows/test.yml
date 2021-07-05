@@ -60,9 +60,3 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_USER }}/ritman_alp_image:latest
 
-
-
-
-    - name: Image digest
-      run: echo ${{ steps.docker_build.outputs.digest }}
-        
