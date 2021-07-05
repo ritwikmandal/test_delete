@@ -1,0 +1,6 @@
+# The line below states we will base our new image on the Latest Official Ubuntu 
+FROM centos:latest
+
+WORKDIR /app_ritman
+COPY . /app_ritman
+RUN apt-get update 
