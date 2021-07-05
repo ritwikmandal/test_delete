@@ -1,5 +1,5 @@
 # The line below states we will base our new image on the Latest Official Ubuntu 
-FROM ubuntu:18.04
+FROM ubuntu:latest
 
 WORKDIR /app_ritman
 COPY . /app_ritman
