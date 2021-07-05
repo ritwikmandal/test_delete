@@ -40,7 +40,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USER }}/ritman_Ubu_image:latest
+          tags: ${{ secrets.DOCKER_USER }}/ritman_ubu_image:latest
 
     - name: Build and push CentOS  
       id: docker_build1
@@ -49,7 +49,7 @@ jobs:
           context: ./
           file: ./Dockerfile1
           push: true
-          tags: ${{ secrets.DOCKER_USER }}/ritman_Cent_image:latest
+          tags: ${{ secrets.DOCKER_USER }}/ritman_cent_image:latest
 
     - name: Build and push Alpine 
       id: docker_build2
@@ -58,7 +58,7 @@ jobs:
           context: ./
           file: ./Dockerfile2
           push: true
-          tags: ${{ secrets.DOCKER_USER }}/ritman_Alp_image:latest
+          tags: ${{ secrets.DOCKER_USER }}/ritman_alp_image:latest
 
 
 
