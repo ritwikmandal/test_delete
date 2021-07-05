@@ -3,4 +3,4 @@ FROM alpine:latest
 
 WORKDIR /app_ritman_alpine
 COPY . /app_ritman_alpine
-RUN apt-get update 
+
